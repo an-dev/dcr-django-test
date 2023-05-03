@@ -6,6 +6,8 @@ class Country(models.Model):
     alpha2Code = models.CharField(max_length=2)
     alpha3Code = models.CharField(max_length=3)
     population = models.IntegerField()
+    top_level_domain = models.CharField(max_length=3)
+    capital = models.CharField(max_length=30)
 
     region = models.ForeignKey(
         "Region",
